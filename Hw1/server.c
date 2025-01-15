@@ -1,3 +1,22 @@
+#include <stdlib.h>
+
+typedef struct {
+    char hostname[512]; // server's host name 
+    unsigned short port;// port to listen
+    int listen_fd;      // fd to wait for a new connection
+} server;
+
+
+typedef struct request {
+    char host[52];      // client's host
+    int conn_fd;        // fd to talk with client
+    char buf[512];      // data sent to or send by client
+    size_t buf_len;     // bytes used by buffer
+    int id;             // id
+    int wait_for_write; // used by handle_read to know if the header is read or not
+} request;
+
+server svr;
 
 
 int main(int argc, char **argv) {
