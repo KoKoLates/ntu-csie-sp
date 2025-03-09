@@ -16,4 +16,4 @@ typedef struct {
     int battle_ended_flag;  // a flag for validate if the battle is the last round or not, 1 for yes, 0 for no
 } Status;
 
-#endif
+#endif // _STATUS_H_
