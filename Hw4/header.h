@@ -18,12 +18,7 @@
 #define MAX_DEPTH 5
 
 // error handling
-#define ERR_EXIT(a) \
-	do              \
-	{               \
-		perror(a);  \
-		exit(1);    \
-	} while (0)
+#define ERR_EXIT(a) do { perror(a); exit(1); } while (0)
 
 // max number of movies
 #define MAX_MOVIES 62500
